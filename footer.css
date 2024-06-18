@@ -1,0 +1,22 @@
+footer {
+  z-index: 1000;
+  text-align: center;
+  padding-top: 1vw; /* 使用vw单位根据视窗宽度进行调整 */
+  padding-bottom: 1vw; /* 使用vw单位根据视窗宽度进行调整 */
+  background-color: #333;
+  color: #ffffff;
+  max-height: 200px;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  font-size: 2vw; /* 使用vw单位根据视窗宽度进行调整 */
+
+}
+@media screen and (max-width: 600px) {
+  /* 在較小的螢幕上進行額外的調整 */
+footer {
+      font-size: 12px; /* 調整字體大小 */
+      padding-top: 0.5vh; /* 調整間距 */
+      padding-bottom: 0.5vh; /* 調整間距 */
+  }
+}

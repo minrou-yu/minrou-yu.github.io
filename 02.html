@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="inform.css">
+    <title>my studyroom</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(216, 216, 216);
+            font-family: 'cwTeXYen', sans-serif;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* 防止橫向滾動 */
+        }
+    </style>
+
+    <style type="text/css">
+        .container {
+            margin: 150px auto;
+            position: relative;
+            width: 100%;
+            max-width: 1400px; /* 設定最大寬度 */
+            height: 100%;
+            max-height: 900px; /* 設定最大高度 */
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%; /* 使用百分比设置宽度 */
+        }
+
+        .aa {
+            width: 1400px;
+            height: 900px;
+            position: absolute;
+            z-index: 1;
+            border: 3px solid #000;
+            box-shadow: #757575 5px 8px 2px;
+            transition: filter 0.5s; /* 添加過渡效果 */
+        }
+
+        
+
+        .bb {
+            display: flex;
+            transition: all 0.5s linear;
+            position: relative;
+            z-index: 1;
+            left: 135px;
+            top: -30px;
+        }
+
+        .bb:hover {
+            transform: scale(1.05);
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+    
+
+        .hover-text {
+            visibility: hidden;
+            width: 500px;
+            color: #fff;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            transform: translateX(-50%);
+            z-index: 3;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .bb:hover .hover-text {
+            visibility: visible;
+            opacity: 1;
+            top: 100px; /* Position the tooltip above the container */
+            left: -100px;
+        }
+
+        .cc {
+            display: flex;
+            transition: all 0.5s linear;
+            position: relative;
+            z-index: 2;
+            left: -150px;
+            top: 350px;
+        }
+
+        .cc:hover {
+            transform: scale(1.05);
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        .cc:hover .hover-text {
+            visibility: visible;
+            opacity: 1;
+            top: 0px; /* Position the tooltip above the container */
+            left: -100px;
+        }
+
+        .dd {
+            display: flex;
+            transition: all 0.5s linear;
+            position: relative;
+            z-index: 2;
+            left: 0px;
+            top: 100px;
+            
+        }
+
+        .dd:hover {
+            transform: scale(1.02);
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        .dd:hover .hover-text {
+            visibility: visible;
+            opacity: 1;
+            top: 300px; /* Position the tooltip above the container */
+            left: 800px;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <div class="main">
+            <div class="aa" id="aa">
+                <img class="aa" src="static/02/studyroom.jpg" alt="無法顯示">
+            </div>
+
+            <div class="dd" id="dd">
+                <img src="static/02/07.png" id="dd-image" style="width: 700px;">
+                <strong><p class="hover-text" style="font-size: 25px;">
+                    【Yu Fan】<br>
+                    <br>
+                    平常總是哀號著沒時間玩遊戲或看書<br>
+                    
+                    最後都等到要期末或做作業前<br>
+                    才會突然心血來潮想要玩遊戲<br>
+                </p></strong>
+            </a>
+            </div>
+
+            <div class="bb" id="bb">
+                <a href="#comic">
+                <img src="static/02/bookcase.png" id="image" style="width: 420px; height: 550px;">
+                <strong><p class="hover-text" style="font-size: 25px;">
+                    【漫畫書】<br>
+                    陳列著許多我很喜歡的漫畫<br>
+                </p></strong>
+                </a> 
+            </div>
+        
+            <div class="cc" id="cc">
+                <a href="#game">
+                <img src="static/02/Game.png" id="cc-image" style="width: 200px;">
+                <strong><p class="hover-text" style="font-size: 25px;">
+                    【GAME】<br>
+                    遊戲盒子<br>
+                    因為太久沒玩而長了許多灰塵<br>
+                </p></strong>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <p style="font-size:80px;
+    font-family: Broadway;
+    padding: 50px 0px 50px 50px;
+     color: rgb(109, 255, 42); 
+     background-color:#333;"
+      id="comic">
+      //Comic Top5
+    </p>
+
+    <div id="main1-container"></div>
+    <script src="inform1.js"></script>
+
+      <p style="font-size:80px;
+      font-family: Broadway;
+      padding: 50px 0px 50px 50px;
+       color: rgb(109, 255, 42); 
+       background-color:#333;"
+       id="game">//Game Top4</p>
+
+    <div id="main1">
+            <div id="click-section1">
+            <div id="drawerboxes1">
+                <div class="drawerbox1 active">
+                <button class="drawer-btn1 active" onclick="slideTo(1)">Raft<span
+                    class="drawer-head1">1</span></button>
+                </div>
+                <div class="drawerbox1">
+                <button class="drawer-btn1" onclick="slideTo(2)">Hollow Knight<span
+                    class="drawer-head1">2</span></button>
+                </div>
+                <div class="drawerbox1">
+                <button class="drawer-btn1" onclick="slideTo(3)">Terraria<span class="drawer-head1">3</span></button>
+                </div>
+                <div class="drawerbox1">
+                <button class="drawer-btn1" onclick="slideTo(4)">Slay the spire<span class="drawer-head1">4</span></button>
+                </div>
+            </div>
+            </div>
+            <div id="slide-section1">
+            <div id="slide-bar1">
+                <div id="bar1"></div>
+            </div>
+            <div id="card-section1">
+                <div id="card11" class="card1">
+                <div class="card-title1">Raft</div>
+                <div class="card-small-title1">/Redbeet Interactive</div>
+                <div class="card-content1">由瑞典開發者Redbeet Interactive開發的開放世界生存遊戲，由Axolot Games發布。遊戲中的特色功能包括採集資源、合成物品及生存冒險等。《Raft》有兩種模式：生存模式中，玩家必須維持生命並採集資源以打造自己的木筏和發掘劇情。</div>
+                <div class="card-img1">
+                    <img src="static/02/raft.gif" alt="">
+                </div>
+                </div>
+                <div id="card21" class="card1">
+                <div class="card-title1">Hollow Knight</div>
+                <div class="card-small-title1">/Team Cherry</div>
+                <div class="card-content1">遊戲故事講述一位小騎士所進行的冒險，他前往探查一座因瘟疫而荒廢多時的地下昆蟲王國聖巢（Hallownest）。小騎士在旅途中探索未知地區、遇到各式各樣的或敵或友的昆蟲、擊敗數十個Boss、學習技能與法術、收集物品和護符，在片段式的文字中解讀各處的歷史、揭開王國的秘密，並在過程中了解自身的使命，最後直面瘟疫的源頭。 </div>
+                <div class="card-img1">
+                    <img src="static/02/knight.gif" alt="">
+                </div>
+                </div>
+                <div id="card31" class="card1">
+                <div class="card-title1">Terraria</div>
+                <div class="card-small-title1">/Re-Logic</div>
+                <div class="card-content1">在《泰拉瑞亞》中，玩家通過發掘地下有用的礦石、建設建築和打造各種器械來保護自己，免受在晚間或洞穴中出現的怪物的襲擊，並且對抗近二十個強大的Boss。
+
+                    同時，遊戲中含有不同地形如沙漠、雪原、樹林、腐化之地等。現實中的一秒鐘為遊戲中一分鐘，而遊戲會在遊戲時間上午四時三十分日出，下午七時三十分日落，而光照在不同時間也會不一樣。日間和夜間會出現不同的怪物。 </div>
+                <div class="card-img1">
+                    <img src="static/02/Slime Town 3.gif" alt="">
+                </div>
+                </div>
+                <div id="card41" class="card1">
+                <div class="card-title1">slay the spire</div>
+                <div class="card-small-title1">/MegaCrit</div>
+                <div class="card-content1">一款融合roguelike與牌組構築的遊戲。在遊戲開頭玩家要先挑選一位角色，每位角色的特性截然不同，擁有各自的角色技能、專屬的卡牌種類等等。遊戲的目標是由底至上的探索高塔，遊戲中有數個大型樓層，每個樓層會出現許多樹狀的分支路線，不同路線可能會遭遇各種事件，諸如與怪物戰鬥、在營火休息、向商人進行交易、隨機事件等。每個樓層的終點都會出現一個頭目，戰鬥獲勝後即可進入下一個樓層。
+
+                </div>
+                <div class="card-img1">
+                    <img src="static/02/store_silent.gif" alt="">
+                </div>
+                </div>
+            </div>
+            </div>
+            <script>
+                // 定义变量 
+                let chosenSlideNumber = 1; // 当前选择的幻灯片编号 
+                let offset = 0; // 幻灯片偏移量 
+                let barOffset = 0; // 导航条偏移量 
+                let intervalID; // 定时器 ID 
+                // 启动幻灯片轮播 
+                startSlide();
+                // 获取所有抽屉按钮，并为每个按钮添加点击事件监听器 
+                const drawerBtns = Array.from(document.querySelectorAll(".drawer-btn1"));
+                drawerBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    clearInterval(intervalID); // 清除定时器 
+                    startSlide(); // 重新启动幻灯片轮播 
+                })
+                })
+                // 获取幻灯片区域 
+                const slideSection = document.querySelector("#slide-section1");
+                // 鼠标移入幻灯片区域时清除定时器 
+                slideSection.addEventListener("mouseenter", () => {
+                clearInterval(intervalID);
+                })
+                // 鼠标移出幻灯片区域时重新启动幻灯片轮播 
+                slideSection.addEventListener("mouseleave", () => {
+                startSlide();
+                })
+                // 切换到指定编号的幻灯片 
+                function slideTo(slideNumber) {
+                drawerboxToggle(slideNumber); // 切换抽屉面板状态 
+                drawerbtnToggle(slideNumber); // 切换抽屉按钮状态 
+                // 更新偏移量 
+                let previousSlideNumber = chosenSlideNumber;
+                chosenSlideNumber = slideNumber;
+                offset += (chosenSlideNumber - previousSlideNumber) * (-100); // 计算幻灯片偏移量 
+                barOffset += (chosenSlideNumber - previousSlideNumber) * (100); // 计算导航条偏移量 
+                barSlide(barOffset); // 移动导航条 
+                // 获取所有幻灯片，为每个幻灯片设置偏移量 
+                const slides = document.querySelectorAll(".card1");
+                Array.from(slides).forEach(slide => {
+                    slide.style.transform = `translateY(${offset}%)`;
+                })
+                }
+                // 切换抽屉面板状态 
+                function drawerboxToggle(drawerboxNumber) {
+                let prevDrawerboxNumber = chosenSlideNumber;
+                const drawerboxes = document.querySelectorAll(".drawerbox1");
+                drawerboxes[prevDrawerboxNumber - 1].classList.toggle("active"); // 切换前一个抽屉面板的状态 
+                drawerboxes[drawerboxNumber - 1].classList.toggle("active"); // 切换当前抽屉面板的状态 
+                }
+                // 切换抽屉按钮状态 
+                function drawerbtnToggle(drawerBtnNumber) {
+                let prevDrawerBtnNumber = chosenSlideNumber;
+                const drawerBtns = document.querySelectorAll(".drawer-btn1");
+                drawerBtns[prevDrawerBtnNumber - 1].classList.toggle("active"); // 切换前一个抽屉按钮的状态 
+                drawerBtns[drawerBtnNumber - 1].classList.toggle("active"); // 切换当前抽屉按钮的状态 
+                }
+                // 移动导航条 
+                function barSlide(barOffset) {
+                const bar = document.querySelector("#bar1");
+                bar.style.transform = `translateY(${barOffset}%)`;
+                }
+                // 启动幻灯片轮播 
+                function startSlide() {
+                intervalID = setInterval(() => {
+                    slideTo(chosenSlideNumber % 4 + 1); // 每次切换到下一个幻灯片 
+                }, 3000); // 每隔 3 秒自动切换幻灯片 
+                }
+            </script>
+    </div>
+
+    
+
+    <div id="footer-placeholder"></div>
+
+  
+    
+    <script>
+
+        const aa = document.getElementById('aa');
+        const bb = document.getElementById('bb');
+        const cc = document.getElementById('cc');
+        const dd = document.getElementById('dd');
+
+        // 定義鼠標移入事件處理函數，背景變暗
+        function darkenBackground() {
+            aa.style.filter = 'brightness(0.4)'; // 背景變暗
+            if (this === bb) {
+                bb.style.filter = 'none'; // bb 保持正常
+            } else {
+                bb.style.filter = 'brightness(0.4)';
+            }
+            if (this === cc) {
+                cc.style.filter = 'none'; // cc 保持正常
+            } else {
+                cc.style.filter = 'brightness(0.4)';
+            }
+            if (this === dd) {
+                dd.style.filter = 'none'; // dd 保持正常
+            } else {
+                dd.style.filter = 'brightness(0.4)';
+            }
+        }
+
+        // 定義鼠標移出事件處理函數，背景恢復
+        function restoreBackground() {
+            aa.style.filter = 'none'; // 恢復正常
+            bb.style.filter = 'none'; // 恢復正常
+            cc.style.filter = 'none'; // 恢復正常
+            dd.style.filter = 'none'; // 恢復正常
+        }
+
+        // 將事件處理函數綁定到相應的 div 上
+        bb.addEventListener('mouseover', darkenBackground);
+        bb.addEventListener('mouseout', restoreBackground);
+        cc.addEventListener('mouseover', darkenBackground);
+        cc.addEventListener('mouseout', restoreBackground);
+        dd.addEventListener('mouseover', darkenBackground);
+        dd.addEventListener('mouseout', restoreBackground);
+
+
+        document.querySelector('.dd').addEventListener('mouseover', function() {
+        document.getElementById('dd-image').src = 'static/02/08.png';
+        });
+
+        document.querySelector('.dd').addEventListener('mouseout', function() {
+        document.getElementById('dd-image').src = 'static/02/07.png';
+        });
+    </script>
+       
+       <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+            
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+        </script>
+
+        
+
+
+        
+
+    
+</body>
+
+</html>
