@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Yufan的床</title>
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css);
+        body{
+            margin: 0;
+            background-color: rgba(255, 255, 255, 0.89);
+            font-family: 'cwTeXYen', sans-serif;
+        }
+
+        /*首圖對齊*/
+        .firstimg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%; /* 设置最大宽度 */
+            margin: 0 auto; /* 让容器水平居中 */
+        }
+
+
+        /*睡覺圖片*/
+        .sleepimg-container {
+            display: flex;
+            justify-content: center; /* 水平居中對齊 */
+            width: fit-content; /* 自適應內容寬度 */
+            margin: 0 auto; /* 使容器在父元素中水平居中 */
+            
+        }
+
+        .sleepimg-item {
+            flex: auto; /* 讓圖片自動調整大小以適應容器 */
+            margin: -10px; /* 控制圖片之間的間隔 */
+            max-width: 15%; /* 控制圖片最大寬度 */
+        }
+        
+        .change-container {
+            width: 80%; /* 使用百分比设置宽度 */
+            max-width: 1000px; /* 设置最大宽度 */
+            height: 400px;
+            border-radius: 20px;
+            background-color: rgb(109, 255, 42);
+            margin: 0 auto; /* 使容器在父元素中水平居中 */
+            margin-bottom: 70px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 在媒体查询中针对不同设备大小进行微调 */
+        @media screen and (max-width: 768px) {
+            .change-container {
+                width: 90%; /* 调整宽度适应小屏幕设备 */
+                margin-bottom: 50px; /* 调整间距 */
+                height: auto; /* 让高度根据内容自动调整 */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .change-container {
+                width: 95%; /* 进一步调整宽度适应更小的设备 */
+                margin-bottom: 30px; /* 调整间距 */
+            }
+        }
+        .change{
+            font-size: 100px;
+            padding: 0;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: -30px;
+            margin-bottom: 30px ;
+            background-color: #ffff;
+            font-size: 30px;
+            color:rgb(109, 255, 42);
+            font-weight: bold;
+            outline: 1px solid;
+            outline-color: rgba(255, 255, 255, .5);
+            outline-offset: 0px;
+            transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .btn:hover {
+        border: 1px solid;
+        outline-color: rgba(255, 255, 255, 0);
+        outline-offset: 15px;
+        }
+
+        .lastimg-container {
+            filter: brightness(40%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%; /* 设置最大宽度 */
+            margin: 0 auto; /* 让容器水平居中 */
+            
+        }
+
+        .btnDiv {
+        margin:0 auto;
+        z-index: 9999;
+        position: absolute;
+        }
+
+        .nextbtn,.nextbtn:focus {
+            position: relative;
+            min-width: 300px;
+            background: #ffffff;
+            color: #ffffff;
+            font-size: 1rem;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            box-sizing: inherit;
+            padding: 10px 20px;
+            border: 1px solid;
+            border-radius: 25px;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+            outline: 5px solid !important;
+            outline-color: rgba(255, 255, 255, 0.5);
+            outline-offset: 0px;
+            text-shadow: none;
+            transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+            cursor: pointer;
+        }
+            
+        .nextbtn:hover {
+            color: #ffffff;
+            border: 1px solid;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+            outline: 5px solid !important;
+            outline-color: rgba(255, 255, 255, 0) !important;
+            outline-offset: 15px;
+            text-shadow: 1px 1px 2px #eaeaea;
+        }
+
+        
+
+
+    </style>
+    
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="firstimg-container" id="content">
+        <img src="static/00/00.png" style="width: 100%;">
+    </div>
+    
+
+    <div>
+        <p style="font-size: 200px;font-family: Broadway;text-align: center; margin-top: 50px;color: rgb(87, 87, 87);">HOLA</p>
+        <p style="font-size: 20px;font-family: Broadway;text-align: center; margin-top: -200px;color:rgb(87, 87, 87);">Outside of the quilt, it's far away, so please don't wake me up just yet.</p>
+        <p style="font-size: 20px;font-family: Broadway;text-align: center; margin-top: -10px;color:rgb(87, 87, 87);">-– Fanter yu</p>
+        <strong><p style="font-size: 30px;font-family: 'cwTeXYen', sans-serif;text-align: center; margin-top: 50px;color:rgb(87, 87, 87);">「棉被以外的地方，都是遠方。」</p></strong>
+        <p style="font-size: 20px;font-family: 'cwTeXYen', sans-serif;text-align: center; line-height :2 ;margin-top: 20px;color:rgb(87, 87, 87);">
+            我是Yu Fan，一位不是在遲到就是在賴床的(偽)創作者。<br>
+            從事當小懶鬼已有20年的經驗，致力於將想法轉化為現實，最後半途而廢。<br>
+            在這裡，你可以發現我最新的作品、專案及文章。<br>
+            無論是創作，還是日常生活中的點滴靈感，我都會在此分享給大家。<br>
+            希望你能在這裡找到啟發，並與我一起探索更多可能性。<br>
+        </p>
+    </div>
+    <div class="sleepimg-container" style="margin-top: 100px; margin-bottom: 50px;">
+        <img src="static/00/sleep.gif" class="sleepimg-item" >
+        <img src="static/00/sleep.gif" class="sleepimg-item" >
+        <img src="static/00/sleep.gif" class="sleepimg-item" >
+        <img src="static/00/sleep.gif" class="sleepimg-item" >
+        <img src="static/00/sleep.gif" class="sleepimg-item" >
+        <img src="static/00/sleep.gif" class="sleepimg-item" >
+    </div>
+
+   
+    <p style="font-size: 70px;font-family: Broadway;text-align: center; margin-top: 150px;color:rgb(87, 87, 87); margin-bottom: 70px;">May all my dreams come true.</p>
+  
+    <div class="change-container">
+        <strong><p class='change' id="change">美夢成真</p></strong>
+        <div class="button-container">
+            <button onclick="changeText()" class="btn">許個願叭</button>
+        </div>
+    </div>
+    
+    <p style="font-size: 70px;font-family: Broadway;text-align: center; margin-top: 50px;color:rgb(87, 87, 87); margin-bottom: 50px;">And may all your dreams come true too.</p>
+
+    <strong><p style="font-size: 30px;font-family: 'cwTeXYen', sans-serif;text-align: center;color:rgb(87, 87, 87);">
+        「躺在床上作夢，希望夢想成真。」
+    </p></strong>
+    <p style="font-size: 20px;font-family: 'cwTeXYen', sans-serif;text-align: center; line-height :2 ;margin-bottom: 50px;color:rgb(87, 87, 87);">
+        希望看到這裡的你還沒打瞌睡<br>
+        記得常回來看看，說不定會有更多讓你大開眼界的東西（或者只是更多的胡言亂語）<br>
+        在這之前，願你的鬧鐘總是準時，而你總是能夠無視它。<br>
+        保持聯繫，別做陌生人<br>
+    </p>
+        <div style="display: flex;justify-content: center;align-items: center;">
+        <img src="static/00/damage.gif" class="lastimg-container" style="width: 100%; ">
+        <div class="btnDiv">
+            <a href="index01.html">
+            <button class="nextbtn">
+                   <strong><p style="font-size: 35px;font-family: Broadway;color:rgb(109, 255, 42); ">Next</p></strong> 
+            </button>
+        </a>
+        </div>
+        </div>
+    <div id="footer-placeholder"></div>
+
+    
+    <script>
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+
+        var sentences = [
+        "身體健康",
+        "期末歐趴",
+        "心想事成",
+        "天降橫財",
+        "天天自然醒",
+        "老師不點名",
+        ];
+        var currentIndex = 0;
+
+        function changeText() {
+        document.getElementById("change").innerHTML = sentences[currentIndex];
+        currentIndex++;
+        if (currentIndex >= sentences.length) {
+            currentIndex = 0;
+        }
+        }
+        
+    </script>
+
+</body>
+
+</html>
